@@ -111,7 +111,7 @@ def get_user_chat():
         try:
             chat_session = client.chats.create(
                 model=MODELO,
-                config=types.GenerateContentConfig(system_instruction=instrucoes)
+                config=types.GenerateContentConfig(system_instruction=SYSTEM_INSTRUCTION)
             )
             active_chats[session_id] = chat_session
         except Exception as e:
